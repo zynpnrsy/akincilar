@@ -2,8 +2,8 @@ import cv2
 
 
 kamera= cv2.VideoCapture(0)
-width = int(kamera.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(kamera.get(cv2.CAP_PROP_FRAME_HEIGHT))
+width = int(kamera.get(3))
+height = int(kamera.get(4))
 
 fourcc = cv2.VideoWriter_fourcc(*"MP4V")
 writer = cv2.VideoWriter("kaydedilen.mp4",fourcc,20,(width,height))
