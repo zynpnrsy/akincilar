@@ -53,3 +53,5 @@ if __name__ == "__main__":
 
 '''12.09.2023 
 test1 (17.50): 98cm'ye kadar tespit yapabiliyor.'''
+'''15.09.2023
+test4 (20.41) 103 cm'ye kadar tespit yapabiliyor.'''
