@@ -5,6 +5,7 @@ from pyzbar import pyzbar
 kamera = cv2.VideoCapture(1)
 
 while True:
+    e = datetime.datetime.now()
     ret, frame = kamera.read()
     frame = cv2.flip(frame,1)
     if not ret or frame is None:
@@ -14,7 +15,7 @@ while True:
             x, y, w, h = barcode.rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0,0,255),2)
             data = barcode.data.decode("utf-8")
-            print(data)
+            print(data , "/" , e.hour,":",e.minute,":",e.second)
             with open ("data.txt", mode="w") as file:
                 file.write("barkod:" + data)
         
